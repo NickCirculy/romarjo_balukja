@@ -60,7 +60,10 @@ for el in dataInput:
             sum1 += 0
             sum2 += 0
 
-    completeMatrices.append(
-        [convertedMatrix1 if sum1 == L else 'E PAMUNDUR', convertedMatrix2 if sum2 == P else 'E PAMUNDUR'])
+    isValid = sum1 == L | sum2 == P
+    if isValid:
+        completeMatrices.append([convertedMatrix1, convertedMatrix2])
+    else:
+        completeMatrices.append('E PAMUNDUR')
 
 print(completeMatrices)
