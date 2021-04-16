@@ -10,16 +10,6 @@ dataInput = [
             1
         ]
     },
-    {
-        "L": 2,
-        "P": 2,
-        "C": [
-            2,
-            0,
-            2,
-            0
-        ]
-    }
 ]
 
 case0 = 0
@@ -60,7 +50,7 @@ for el in dataInput:
             sum1 += 0
             sum2 += 0
 
-    isValid = sum1 == L | sum2 == P
+    isValid = sum1 == L and sum2 == P
     if isValid:
         completeMatrices.append([convertedMatrix1, convertedMatrix2])
     else:
